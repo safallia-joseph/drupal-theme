@@ -735,63 +735,83 @@
   </div>
 </section>
 
-      <footer class="mw-100 c3-bg-navy white pa3 pa5-ns">
+  <footer class="mw-100 c3-bg-navy white pa3 pa5-ns">
+    <!-- test code start -->
+    <div id="footer-wrapper"><div class="section">
 
-<div class="mw8 mw6-m center cf">
-  <div class="fl w-100 w-50-m w-25-l pa3">
-    <h5 class="lh-copy f6 ttu mb1">Corporate Headquarters</h5>
-    <p class="lh-copy f6 mv0 ml1 fw1">Cypress Semiconductor<br>
-    198 Champion Court<br>
-    San Jose, CA 95134 USA<br>
-    Tel: +1-408-943-2600</p>
-  </div>
+        <?php if ($page['footer_firstcolumn'] || $page['footer_secondcolumn'] || $page['footer_thirdcolumn'] || $page['footer_fourthcolumn']): ?>
+          <div id="footer-columns" class="clearfix">
+            <?php print render($page['footer_firstcolumn']); ?>
+            <?php print render($page['footer_secondcolumn']); ?>
+            <?php print render($page['footer_thirdcolumn']); ?>
+            <?php print render($page['footer_fourthcolumn']); ?>
+          </div> <!-- /#footer-columns -->
+        <?php endif; ?>
 
-  <div class="fl w-100 w-50-m w-25-l pa3">
-    <h5 class="lh-copy f6 ttu mb1">Customer Service Support</h5>
-    <p class="lh-copy f6 mv0 ml1 fw1">
-    +1-800-541-4736<br>
-    Hours:<br>
-    8:00AM - 5:00PM (local time)</p>
-    <p class="f6"><a href="#" class="link white dim normal">Create a MyCase</a></p>
-  </div>
+        <?php if ($page['footer']): ?>
+          <div id="footer" class="clearfix">
+            <?php print render($page['footer']); ?>
+          </div> <!-- /#footer -->
+        <?php endif; ?>
 
-  <div class="fl w-100 w-50-m w-25-l pa3">
-    <h5 class="lh-copy f6 ttu mb1">International Support</h5>
-    <p class="lh-copy f6 mv0 ml1 fw1">+1-408-943-2600<br>
-    United States +1-800-541-4736<br>
-    Hours:<br>
-    4:30AM - 1:30PM (pacific time)<br>
-    7:30PM - 4:30AM (standard time)</p>
-  </div>
-
-  <div class="fl w-100 w-50-m w-25-l pa3">
-    <h5 class="lh-copy f6 ttu mb1">Other Requests</h5>
-    <p class="lh-list f6 mv0 ml1">
-    <a href="#" class="link white dim">Contact Us</a><br>
-    <a href="#" class="link white dim">Customer Care</a><br>
-    <a href="#" class="link white dim">Report a Website Problem</a></p>
-  </div>
-</div>
-<div class="center tc">
-  <ul class="list pl0 lh-copy">
-    <li class="ttu f6 dib mh3"><a href="#" class="link white dim b">About Us</a></li>
-    <li class="ttu f6 dib mh3"><a href="#" class="link white dim b">Careers</a></li>
-    <li class="ttu f6 dib mh3"><a href="#" class="link white dim b">Investors</a></li>
-    <li class="ttu f6 dib mh3"><a href="#" class="link white dim b">{{ social icons here }}</a></li>
-  </ul>
-
-  <div  class="">
-    <img src="sites/all/themes/cy/images/social-icons/linkedin-mark.svg" class="svg social-icon linkedin-icon">
-    <img src="sites/all/themes/cy/images/social-icons/linkedin-mark.svg" class="svg social-icon youtube-icon">
-  </div>
+      </div></div> <!-- /.section, /#footer-wrapper -->
+    <!-- test code end -->
 
 
+    <!-- <?php print render($page['footer']); ?>
+    <div class="mw8 mw6-m center cf">
+      <div class="fl w-100 w-50-m w-25-l pa3">
+        <h5 class="lh-copy f6 ttu mb1">Corporate Headquarters</h5>
+        <p class="lh-copy f6 mv0 ml1 fw1">Cypress Semiconductor<br>
+        198 Champion Court<br>
+        San Jose, CA 95134 USA<br>
+        Tel: +1-408-943-2600</p>
+      </div>
+
+      <div class="fl w-100 w-50-m w-25-l pa3">
+        <h5 class="lh-copy f6 ttu mb1">Customer Service Support</h5>
+        <p class="lh-copy f6 mv0 ml1 fw1">
+        +1-800-541-4736<br>
+        Hours:<br>
+        8:00AM - 5:00PM (local time)</p>
+        <p class="f6"><a href="#" class="link white dim normal">Create a MyCase</a></p>
+      </div>
+
+      <div class="fl w-100 w-50-m w-25-l pa3">
+        <h5 class="lh-copy f6 ttu mb1">International Support</h5>
+        <p class="lh-copy f6 mv0 ml1 fw1">+1-408-943-2600<br>
+        United States +1-800-541-4736<br>
+        Hours:<br>
+        4:30AM - 1:30PM (pacific time)<br>
+        7:30PM - 4:30AM (standard time)</p>
+      </div>
+
+      <div class="fl w-100 w-50-m w-25-l pa3">
+        <h5 class="lh-copy f6 ttu mb1">Other Requests</h5>
+        <p class="lh-list f6 mv0 ml1">
+        <a href="#" class="link white dim">Contact Us</a><br>
+        <a href="#" class="link white dim">Customer Care</a><br>
+        <a href="#" class="link white dim">Report a Website Problem</a></p>
+      </div>
+    </div>
+    <div class="center tc">
+      <ul class="list pl0 lh-copy">
+        <li class="ttu f6 dib mh3"><a href="#" class="link white dim b">About Us</a></li>
+        <li class="ttu f6 dib mh3"><a href="#" class="link white dim b">Careers</a></li>
+        <li class="ttu f6 dib mh3"><a href="#" class="link white dim b">Investors</a></li>
+        <li class="ttu f6 dib mh3"><a href="#" class="link white dim b">{{ social icons here }}</a></li>
+      </ul>
+
+      <div  class="">
+        <img src="sites/all/themes/cy/images/social-icons/linkedin-mark.svg" class="svg social-icon linkedin-icon">
+        <img src="sites/all/themes/cy/images/social-icons/linkedin-mark.svg" class="svg social-icon youtube-icon">
+      </div>
 
 
-  <p class="f6 mt4">&copy; Cypress Semiconductor Corporation. All rights reserved.</p>
-</div>
 
-</footer>
 
+      <p class="f6 mt4">&copy; Cypress Semiconductor Corporation. All rights reserved.</p>
+    </div> -->
+  </footer>
 
     </main>
