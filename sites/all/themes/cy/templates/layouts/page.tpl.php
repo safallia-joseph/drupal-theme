@@ -97,7 +97,7 @@
 
   </li>
 
-
+<?php print render($page['content']); ?>
   <!-- Solutions drop down -->
   <div id="solutions-menu-content" class="top-0 left-0 w-100 bg-lightbox dropdown-menu dn ba b--near-white z-999" style="top: 8rem;">
     <div class="mw8 center pv1 ph5 bg-white o-100 cf f">
