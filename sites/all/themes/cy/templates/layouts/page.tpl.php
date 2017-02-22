@@ -1,31 +1,16 @@
 <header class="center mw8 cf relative ph3">
-<a href="/" class="link">        <img src="sites/all/themes/cy/images/cypress.svg" class="h3b pv4" alt="Cypress" />
-</a>      <div class="absolute c3-light-type top-0 right-1 f6" style="top:1.5rem">
-  <div class="w7 ba dib pa2 br2 b--light-silver">
-    <label class="dn" for="edit-keys-406">Enter your keywords </label>
-    <input placeholder="Enter your keywords" class="input-reset c3-grey-type mw-100 pa0 pr6 bn dib" type="text" value=""  maxlength="128" role="combobox">
-    <a href="#" class="link dim c3-grey-type"><img class="h1 v-mid"src="sites/all/themes/cy/images/subnav/search.svg" alt="Search">
+  <?php if ($logo): ?>
+    <a class = "link" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+      <img class = "h3b pv4" src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+    </a>
+  <?php endif; ?>
+  <div class="absolute c3-light-type top-0 right-1 f6" style="top:1.5rem">
+    <?php print render($page['top_header']); ?>
   </div>
-  <a href="#" class="link dim ph2 c3-grey-type">Community</a> |
-  <a href="#" class="link dim ph2 c3-grey-type">English</a> |
-  <a href="#" class="link dim c3-grey-type"><img class="h1 v-mid ph2"src="sites/all/themes/cy/images/subnav/cart.svg" alt="Shopping Cart"> |
-    <a href="#" class="link dim c3-grey-type dn"><img class="h1 v-mid pl2"src="sites/all/themes/cy/images/subnav/login.svg" alt="Log In"></a>
-    <a href="#" class="link dim c3-grey-type">Log In</a>
-</div>
-
-<nav class="pt5 dib f5 fr" style="padding-top: 5.5rem;>
-  <ul class="list pl0 pt1 mv0">
-    <li class="dib  solutions-menu-btn">
-      <a href="#" class="link pb2 ttu c3-dark-type dib mr4 b ba--c3-red border-hover bw2">Solutions</a></li>
-    <li class="dib dropdown products-menu-btn"><a href="#" class="link pb2 ttu c3-dark-type dib mr4 b pb2 ba--c3-red border-hover bw2">Products</a>
-
-    <li class="dib  dropdown design-menu-btn"><a href="#" class="link pb2 ttu c3-dark-type dib mr4 b ba--c3-red border-hover bw2">Design Support</a></li>
-    <li class="dib  dropdown buy-menu-btn"><a href="#" class="link pb2 ttu c3-dark-type dib mr4 b ba--c3-red border-hover bw2">Buy &amp; Sample</a></li>
-    <li class="dib  dropdown cypress3-menu-btn "><a href="#" class="link pb2 ttu c3-dark-type dib b ba--c3-red border-hover bw2">Cypress 3.0</a></li>
-  </ul>
-</nav>
-
-    </header>
+  <nav class="pt5 dib f5 fr" style="padding-top: 5.5rem;>
+    <?php print render($page['header']); ?>
+  </nav>
+</header>
 
     <main class="">
 

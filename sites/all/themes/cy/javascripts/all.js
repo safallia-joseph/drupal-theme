@@ -1,4 +1,6 @@
 
+var $ = jQuery;
+$(function() {
 $(document).ready(function(){
 
 
@@ -139,3 +141,4 @@ $(document).ready(function (){
        var activeIndex = parseInt($(".active").attr("rel"));
        $('#myslide .cover').animate({left:-widthPerItem*(parseInt(activeIndex)-1)});
     }
+});
